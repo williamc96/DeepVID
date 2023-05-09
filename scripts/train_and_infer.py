@@ -16,6 +16,7 @@ def train_and_infer():
     for tif_file in tif_files:
         print(f"Training on {tif_file}")
         model_name = run_training([tif_file])
+        print(f"Trained model {model_name}")
         print(f"Running inference on {tif_file}")
         run_inference(model_name, tif_file)
 
